@@ -4,7 +4,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import HorizontalScrollCarousel from './HorizontalScrollCarousel';
 
-const Example = () => {
+export const Example = () => {
   const targetRef = useRef(null);
   const { scrollY } = useScroll({
     target: targetRef,
@@ -32,4 +32,3 @@ const Example = () => {
   );
 };
 
-export default Example;
