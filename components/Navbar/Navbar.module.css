@@ -1,0 +1,65 @@
+ .navLink {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px; 
+  transition: color 0.3s ease; 
+}
+
+.navLink::before,
+.navLink::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0; 
+  background:blue; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  transition: width 0.3s ease;
+}
+.navLink::before {
+  left: 0; 
+}
+
+.navLink::after {
+  right: 0; 
+}
+
+.navLink:hover {
+  color: lightblue; 
+}
+
+.navLink:hover::before,
+.navLink:hover::after {
+  width: 15px;
+}
+
+.header {
+  display: flex;
+  align-items: center; 
+  background-color: black;
+  justify-content: space-between;
+  padding: 10px 20px; 
+}
+
+.nav {
+  display: flex;
+  gap: 20px; 
+}
+
+.logo {
+  height: 60px; 
+  width: auto; 
+}
+
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column; 
+  }
+  .navLink {
+    padding: 10px 0; 
+  }
+}

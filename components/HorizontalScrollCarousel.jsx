@@ -1,5 +1,3 @@
-
-
 import { motion, useTransform, useScroll, useSpring, useMotionValue } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 

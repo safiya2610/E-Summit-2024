@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
+
 export const HeroParallax = ({ products }) => {
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
@@ -49,7 +50,9 @@ export const HeroParallax = ({ products }) => {
     <div
       ref={ref}
       className="h-[250vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+       id="hello"
     >
+      
       <Header />
       <motion.div
         style={{
