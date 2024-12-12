@@ -12,7 +12,7 @@ export const Example = () => {
   const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
 
   return (
-    <div className="">
+    <div className="" id="Merch">
       <div className="flex items-center justify-center">
         <motion.span
           ref={targetRef}

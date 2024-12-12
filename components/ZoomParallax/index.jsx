@@ -56,7 +56,7 @@ export default function Index() {
     ]
 
     return (
-        <div ref={container} className={styles.container}>
+        <div ref={container} className={styles.container} id='hehe'>
             <div className={styles.sticky}>
                 {
                     pictures.map( ({src, scale}, index) => {
