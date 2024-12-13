@@ -6,17 +6,21 @@ import { Example } from "../components/MerchSection/Example";
 import { Hero } from "../components/HeroCursor/Hero";
 import { HeroCursor } from "../components/HeroCursor/HeroCursor";
 import Contact from "../components/ContactUs/contact";
+import Navbar from "../components/Navbar/Navbar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Hero />
-      <HeroCursor />
-      <HeroParallax products={products} />
-      <CombinedComponent />
-      <Example />
-      <Contact />
-    </main>
+    <>
+      <Navbar />
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <Hero />
+        <HeroCursor />
+        <HeroParallax products={products} />
+        <CombinedComponent />
+        <Example />
+        <Contact />
+      </main>
+    </>
   );
 }
 
