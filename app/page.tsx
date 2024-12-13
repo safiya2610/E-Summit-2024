@@ -5,6 +5,7 @@ import { CombinedComponent } from "../components/CombinedComponent";
 import { Example } from "../components/MerchSection/Example";
 import { Hero } from "../components/HeroCursor/Hero";
 import { HeroCursor } from "../components/HeroCursor/HeroCursor";
+import Contact from "../components/ContactUs/contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroParallax products={products} />
       <CombinedComponent />
       <Example />
+      <Contact />
     </main>
   );
 }
