@@ -9,16 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@hookform/resolvers": "^3.9.1",
     "@studio-freight/lenis": "^1.0.42",
     "clsx": "^2.1.1",
+    "enspire": "file:",
     "framer-motion": "^11.2.13",
     "legendary-cursor": "^1.0.2",
     "next": "^14.2.20",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.54.1",
     "saas": "^1.0.0",
     "sass": "^1.81.1",
-    "tailwind-merge": "^2.4.0"
+    "tailwind-merge": "^2.4.0",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^20",
