@@ -21,9 +21,24 @@ export async function submitContactForm(formData: FormData) {
     return { success: false, errors: validatedFields.error.flatten().fieldErrors }
   }
 
-  // Simulate sending the message (replace with actual email sending logic)
-  await new Promise(resolve => setTimeout(resolve, 1000))
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/contact`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(validatedFields.data),
+    })
+    
 
-  return { success: true, message: "Your message has been sent successfully!" }
+    if (!response.ok) {
+      const errorData = await response.json()
+      return { success: false, errors: { api: errorData.error || "Something went wrong!" } }
+    }
+
+    const responseData = await response.json()
+    return { success: true, message: responseData.message }
+  } catch (error) {
+    return { success: false, errors: { api: "An unexpected error occurred. Please try again later." } }
+  }
 }
-
