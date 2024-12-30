@@ -5,7 +5,7 @@ const Carousel: React.FC = () => {
   return (
 
     <div className={styles.container}>
-     <div></div>
+    
       <div className={styles.carousel}>
      
         <div className={styles.carouselFace}>
